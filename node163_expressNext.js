@@ -4,14 +4,14 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
-    console.log('첫버째 미들웨어 요청');
+    console.log('첫번째 미들웨어 요청');
     req.user1 = '철수';
     next();
 });
 
 app.use((req, res, next) => {
-    console.log('두버째 미들웨어 요청');
-    req.user1 = '영희';
+    console.log('두번째 미들웨어 요청');
+    req.user2 = '영희';
     next();
 });
 
